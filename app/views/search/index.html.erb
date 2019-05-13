@@ -1,0 +1,16 @@
+<h1>Search#index</h1>
+<p>Find me in app/views/search/index.html.erb</p>
+
+<h2 id=total-results>Total Results: <%= facade.total_results %></h2>
+
+<ul>
+  <% facade.stations.each do |stations| %>
+    <li>
+      <%= station.name %>,
+      <%= station.address %>,
+      <%= station.fuel_types %>,
+      <%= station.distance %>,
+      <%= station.access_times %>,
+    </li>
+  <% end %>
+</ul>
