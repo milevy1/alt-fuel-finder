@@ -4,8 +4,8 @@
 <h2 id=total-results>Total Results: <%= facade.total_results %></h2>
 
 <ul>
-  <% facade.stations.each do |stations| %>
-    <li>
+  <% facade.stations.each do |station| %>
+    <li class=nearby-station>
       <%= station.name %>,
       <%= station.address %>,
       <%= station.fuel_types %>,
