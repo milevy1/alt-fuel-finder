@@ -1,0 +1,15 @@
+<h1>Search#index</h1>
+<p>Find me in app/views/search/index.html.erb</p>
+
+<h2 id=total-results>Total Results: <%= facade.total_results %></h2>
+
+<p>Showing nearest 15 results</p>
+<% facade.stations.each do |station| %>
+  <h3 class=nearby-station><%= station.name %></h3>
+  <ul>
+    <li>Address: <%= station.address %></li>
+    <li>Fuel types: <%= station.fuel_types %></li>
+    <li>Distance (mi): <%= station.distance %></li>
+    <li>Access times: <%= station.access_times %></li>
+  </ul>
+<% end %>
