@@ -8,7 +8,10 @@ class StationsFacade
   end
 
   def stations
-
+    nearest_15_stations = JSON.parse(response.body, symbolize_names: true)[:fuel_stations].take(15)
+    nearest_15_stations.map do |station_data|
+      Station.new(station_data)
+    end
   end
 
   def conn
