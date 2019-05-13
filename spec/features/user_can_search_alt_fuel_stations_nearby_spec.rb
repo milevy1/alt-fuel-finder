@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "User can search alt fuel stations nearby" do
-  scenario "and view navbar contents" do
+  scenario "user searches nearby zipcode 80206" do
     # As a user
     # When I visit "/"
     visit "/"
